@@ -11,5 +11,7 @@ namespace LobbyWars.Core.Services
     {
         List<Roles> GetListOfRoles(string roles);
         int GetValueFromRoles(char role);
+        Boolean ValidateRoles(List<Roles> roles);
+        string ConvertListToString(List<Roles> roles);
     }
 }

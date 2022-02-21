@@ -10,6 +10,22 @@ namespace LobbyWars.ServiceLibrary.Services
 {
     public class RolesService : IRoleService
     {
+        public RolesService()
+        {
+
+        }
+        public bool ValidateRoles(List<Roles> roles)
+        {
+            foreach (var role in roles)
+            {
+                if (role.Role.Equals('#'))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         public List<Roles> GetListOfRoles(string roles)
         {
             List<Roles> listRole = new List<Roles>();
@@ -32,6 +48,16 @@ namespace LobbyWars.ServiceLibrary.Services
                     return 1;
                 default: return 0;
             }
+        }
+
+        public string ConvertListToString(List<Roles> roles)
+        {
+            string newRoles = null;
+            foreach (var role in roles)
+            {
+                newRoles = newRoles + role.Role.ToString();
+            }
+            return newRoles;
         }
     }
 }

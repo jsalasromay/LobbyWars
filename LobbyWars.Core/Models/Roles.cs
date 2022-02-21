@@ -8,7 +8,7 @@ namespace LobbyWars.Core.Models
 {
     public class Roles
     {
-        public Char Role { get; set; }
+        public char Role { get; set; }
         public int Value { get; set; }
     }
 }

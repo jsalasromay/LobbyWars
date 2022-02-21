@@ -11,7 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\LobbyWars.Core\LobbyWars.Core.csproj" />
+    <ProjectReference Include="..\LobbyWars.ServiceLibrary\LobbyWars.ServiceLibrary.csproj" />
   </ItemGroup>
 
 </Project>
